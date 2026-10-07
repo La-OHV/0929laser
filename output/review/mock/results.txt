@@ -1,0 +1,17 @@
+PASS: legacy feature bits, AIN1-only configuration, 100ms cadence, MAN1+NOOP
+PASS: newer feature readback 0x01 accepted
+PASS: 0V/5V/10V scale, raw zero is valid, existing AIN1 service functions
+PASS: calibration uses the published raw without an extra conversion
+PASS: reverse calibration and equal-endpoint rejection
+PASS: startup timeout retries after one second
+PASS: AIN1 range corruption invalidates output and recovers
+PASS: AIN1 power-down protection; other-channel configuration is irrelevant
+PASS: SDO format corruption invalidates output and recovers
+PASS: NOOP transfer failure rejects raw and next sample recovers
+PASS: MAN1 transfer failure stops before NOOP
+PASS: tag mismatch rejected; three failures trigger reconfiguration
+PASS: write echo mismatch rejects initialization
+PASS: disconnected bus uses one-second backoff then recovers
+PASS: ADC reset during operation restores AIN1 configuration
+PASS: coherent single-channel snapshot, stale across tick wrap, rail status
+16 AIN1 regression scenarios passed. Hardware timing is not simulated.
